@@ -1,10 +1,9 @@
-x = []
+x = ""
 
 
 def parse(file):
     global x
-    with open(file, "r") as f:
-        x = f.readlines()
+    x = [x for x in open("input.txt")]
 
 
 def one():

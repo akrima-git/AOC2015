@@ -26,10 +26,10 @@ def directions_with_robot(houses: list) -> int:
     houses_visited = set()
     sum = 0
     for x in houses:
-        start1,start2 = [0, 0],[0,0]
+        start1, start2 = [0, 0], [0, 0]
         houses_visited.add(tuple(start1))
         x = x.strip()
-        for i,y in enumerate(x):
+        for i, y in enumerate(x):
             if i % 2 != 0:
                 dx, dy = directions_dict[y]
                 start1[0] += dx
@@ -45,8 +45,8 @@ def directions_with_robot(houses: list) -> int:
 
 
 def main():
-    print("first year houses visited:",directions(parse("input.txt")))
-    print("second year houses visited:",directions_with_robot(parse("input.txt")))
+    print("first year houses visited:", directions(parse("input.txt")))
+    print("second year houses visited:", directions_with_robot(parse("input.txt")))
 
 
 main()
