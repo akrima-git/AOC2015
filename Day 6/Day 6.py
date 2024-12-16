@@ -34,10 +34,8 @@ def brightness(list_input):
         switch = re.search(p, line)
         switch = switch.group()
         x1, y1, x2, y2 = map(int, re.findall(p2, line))
-        x2 += 1
-        y2 += 1
-        for i in range(x1, x2):
-            for j in range(y1, y2):
+        for i in range(x1, x2+1):
+            for j in range(y1, y2+1):
                 index = j * 1000 + i
                 if switch == "toggle":
                     x[index] += 2
